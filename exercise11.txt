@@ -1,0 +1,11 @@
+Teoric Exercise:
+    Question: What is a Homography Matrix, how you can use that?
+
+    Answer:
+        A homography matrix is a 3×3 transformation matrix that maps points from one plane to another
+        in projective space, typically used in computer vision to relate the positions of points in
+        two different images. It encapsulates rotation, translation, scale, and perspective effects between
+        the two views. Homographies are useful for tasks like image stitching, camera pose estimation
+        from planar markers, and augmented reality, where knowing how one image relates to another allows
+        you to warp, align, or overlay content. It can be computed using at least four point correspondences
+        between the two planes and refined using methods like RANSAC to handle mismatches.

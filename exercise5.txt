@@ -1,0 +1,13 @@
+Teoric exercise:
+    Question: In the feature point matching, mismatches will inevitably be encountered.
+    What happens if we put the wrong match into PnP ? What methods can you think of to avoid mismatches?
+
+    Answer: When incorrect (mismatched) 2D–3D point correspondences are passed into PnP (Perspective-n-Point) several problems:
+    1) Pose estimation becomes inaccurate. The camera pose (rotation and translation) calculated may be completely wrong or unstable.
+
+    2) PnP may fail to converge. Commom algorithms expect the matches to be accurate.
+
+    3) Numerical instability. Even a few wrong matches can cause ill-conditioned linear systems.
+
+    One option to avoid and handle mismatches is using RANSAC, which iteratively selects random subsets of matches
+    and, during pose estimation, checks which points are inliers.

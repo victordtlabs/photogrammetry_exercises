@@ -1,0 +1,9 @@
+Teoric exercise:
+    Question:  Investigate why FLANN can quickly handle matching problems.
+    In addition to FLANN, what are some other ways to accelerate matching?
+
+
+    Answer: FLANN (Fast Library for Approximate Nearest Neighbors) accelerates matching problems
+    by using efficient data structures (like KD-trees or hierarchical clustering trees) and approximate
+    search algorithms. These techniques greatly improve performance compared to brute-force methods,
+    while introducing only small, often negligible, errors in the results.

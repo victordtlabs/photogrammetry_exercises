@@ -1,0 +1,24 @@
+Teoric exercise:
+    Question:What are the problems you will face when trying to match ORB with SIFT features?
+
+    Answer: 
+    Some of the problems :
+    1. Descriptor Type Mismatch:
+        ORB uses binary descriptors while SIFT uses floating-point descriptors (128-dimensional float32 vectors).
+        Matching these directly is not valid because their representations lie in different spaces.
+
+    2. Distance Metric Incompatibility
+        ORB descriptors are best matched using Hamming distance while  SIFT descriptors are matched using Euclidean (L2) distance.
+
+    3. Descriptor Dimension Mismatch
+        ORB: 256-bit (or 32-byte) descriptors.
+        SIFT: 128-float (512-byte) descriptors.
+
+    4. Inconsistent Keypoint Localization
+        SIFT tends to find more scale- and rotation-invariant keypoints.
+        ORB tends to find faster but less robust keypoints.
+
+    5. Incompatible Feature Distributions
+        ORB tends to give more features in high-contrast corners.
+        SIFT is better at blobs and textured areas.
+
